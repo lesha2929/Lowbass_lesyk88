@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>By Lesyk – Обробка Треків та Low Bass</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    /* Анімація вступу */
+    #intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ff0000, #0000ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease-in-out 2s forwards;
+    }
+
+    #intro h1 {
+      font-size: 3rem;
+      color: white;
+      font-weight: bold;
+      animation: zoomIn 2s ease-out;
+      text-align: center;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* Після інтро */
+    #main-content {
+      display: none;
+    }
+
+    #main-content.show {
+      display: block;
+      animation: fadeInMain 1s ease-in-out;
+    }
+
+    @keyframes fadeInMain {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .btn-hover:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+    #examples {
+      background: linear-gradient(135deg, #ff0000, #000000);
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Інтро-анімація -->
+  <div id="intro">
+    <h1>🔥 Low Bass By Lesyk 🔥</h1>
+  </div>
+
+  <!-- Основний контент -->
+  <div id="main-content">
+    <header class="text-center py-6">
+      <h1 class="text-4xl font-bold">By Lesyk – Обробка Треків та Low Bass</h1>
+      <p class="mt-2 text-lg">Замовляй треки або вчися створювати сам</p>
+    </header>
+
+    <nav class="bg-gray-800 p-4">
+      <ul class="flex justify-center space-x-6">
+        <li><button class="tab-btn btn-hover px-4 py-2 bg-blue-600 rounded" data-tab="services">🔧 Послуги</button></li>
+        <li><button class="tab-btn btn-hover px-4 py-2 bg-blue-600 rounded" data-tab="examples">🎧 Приклади</button></li>
+        <li><button class="tab-btn btn-hover px-4 py-2 bg-blue-600 rounded" data-tab="contact">📲 Зв’язок</button></li>
+      </ul>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-6">
+      <div id="services" class="tab-content active">
+        <h2 class="text-2xl font-bold mb-4">🔧 Послуги</h2>
+        <div class="space-y-4">
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h3 class="text-xl">🎛 Замовлення обробки</h3>
+            <p>Low Bass, Mastering, EQ – все під автозвук або сцену.</p>
+            <a href="#" class="mt-2 inline-block text-blue-400 hover:underline">Замовити обробку</a>
+          </div>
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h3 class="text-xl">📚 Навчання Low Bass</h3>
+            <p>Навчу робити глибокий бас у FL Studio – від 0 до готового треку.</p>
+            <a href="#" class="mt-2 inline-block text-blue-400 hover:underline">Хочу навчання</a>
+          </div>
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h3 class="text-xl">🐌 Slowed & Screwed</h3>
+            <p>Створюю атмосферні, сповільнені версії треків у 37-41Hz стилі.</p>
+            <a href="#" class="mt-2 inline-block text-blue-400 hover:underline">Замовити slowed</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="examples" class="tab-content">
+        <h2 class="text-2xl font-bold mb-4">🎧 Приклади треків (37‑41 Hz)</h2>
+        <div class="space-y-4">
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h3 class="text-xl">BLACKPINK – JUMP (🔥Low Bass by Lesha🔥)</h3>
+            <audio controls class="w-full mt-2">
+              <source src="https://drive.google.com/uc?export=download&id=1kWzpQn7V-PAmNAK1pW1kjvh75cpcmURT" type="audio/mpeg">
+              Ваш браузер не підтримує аудіо.
+            </audio>
+          </div>
+          <div class="p-4 bg-gray-800 rounded-lg">
+            <h3 class="text-xl">DOROFEEVA & POSITIFF – Смак-печаль (🔥Low Bass by Lesyk🔥)</h3>
+            <audio controls class="w-full mt-2">
+              <source src="https://drive.google.com/uc?export=download&id=1XFEh2HJ7r043k7eT9l8Bg80t5dl5kUDa" type="audio/mpeg">
+              Ваш браузер не підтримує аудіо.
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="tab-content">
+        <h2 class="text-2xl font-bold mb-4">📲 Зв’язок</h2>
+        <p class="text-lg">Напиши мені в Telegram: <a href="https://t.me/By_lyosha" class="text-blue-400 hover:underline">@By_lyosha</a></p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Показати основний контент після 3 секунд
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('main-content').classList.add('show');
+      }, 3000);
+    });
+
+    // Вкладки
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.tab-btn');
+      const contents = document.querySelectorAll('.tab-content');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          contents.forEach(content => content.classList.remove('active'));
+          const tabId = tab.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
